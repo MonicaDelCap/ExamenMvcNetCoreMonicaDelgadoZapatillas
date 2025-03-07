@@ -1,0 +1,17 @@
+﻿@model Zapatilla
+<ul class="list-group">
+	<li class="list-group-item">@Model.Nombre</li>
+	<li class="list-group-item">@Model.Precio</li>
+	<li class="list-group-item">@Model.Descripcion</li>
+</ul>
+<div id="imagenes"></div>
+@section Scripts{
+	<script>
+		function loadImagenProducto(posicion){
+			$(function(){
+				$("#imagenes").load("/Zapatillas/_ImagenesPartial?posicion=" + posicion + "&idzapatilla=" + @Model.IdProducto);
+			});
+		}
+		loadImagenProducto(1);
+	</script>
+}

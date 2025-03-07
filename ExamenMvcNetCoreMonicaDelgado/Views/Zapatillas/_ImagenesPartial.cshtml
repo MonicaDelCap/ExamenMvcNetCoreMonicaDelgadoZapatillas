@@ -1,0 +1,19 @@
+﻿@model Imagen
+
+<button onclick="loadImagenProducto(1)">
+	Primero
+</button>
+<button onclick="loadImagenProducto(@ViewData["ANTERIOR"])">
+	Anterior
+</button>
+<button onclick="loadImagenProducto(@ViewData["SIGUIENTE"])">
+	Siguiente
+</button>
+<button onclick="loadImagenProducto(@ViewData["ULTIMO"])">
+	Ultimo
+</button>
+
+
+<div>
+	<img style="width:150px;height:150px" src="@Model.ImagenNombre"/>
+</div>
