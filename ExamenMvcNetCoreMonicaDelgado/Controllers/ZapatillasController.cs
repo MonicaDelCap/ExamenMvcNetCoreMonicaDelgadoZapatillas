@@ -32,11 +32,7 @@ namespace ExamenMvcNetCoreMonicaDelgado.Controllers
             }
             Zapatilla zapa = await this.repositoryZapatillas.FindZapatillaByIdAsync(idzapatilla);
             Imagen imagen = await this.repositoryZapatillas.GetImagenByPosAsync(idzapatilla, posicion.Value);
-            ZapatillaImagen zapatillaImagen = new ZapatillaImagen
-            {
-                Zapatilla = zapa,
-                Imagen = imagen
-            };
+            
 
             int numRegistros = await this.repositoryZapatillas.GetNumeroImagenesByIdZapatillaAsync(idzapatilla);
 
